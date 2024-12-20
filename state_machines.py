@@ -20,7 +20,7 @@ class MealyMachine:
     def next_clock(self, input_):
         for state in self.states:
             if state.name == self.current_state:
-                self.current_state = state.state_table[input_][1]   #TODO add exception handler
+                self.current_state = state.state_table[input_][1]
                 return state.state_table[input_][0]
 
     def machine_init(self):
@@ -95,7 +95,7 @@ if CHOICE == MEALY:
     mealy.machine_init()
 
 elif CHOICE == MOORE:
-    Moore = MooreMachine("Sequency detecotr") #TODO invalid syntax
+    Moore = MooreMachine("Sequency detecotr")
     MooreState1 = MooreState("A", 0)
     MooreState1.add_to_table(0,"B")
     MooreState1.add_to_table(1,"A")
